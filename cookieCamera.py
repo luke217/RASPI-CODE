@@ -7,7 +7,7 @@ import threading
 
 
 def takePics(picTotal):
-    #our file path
+    #our file path(need to create a cookie directory beforehand)
     filePath = "/home/pi/Desktop/cookie/"
     #picTotal = 1
     picCount = 0
@@ -43,7 +43,7 @@ def takevid():
     #Setup the camera
     with picamera.PiCamera() as camera:
     
-        #our file path
+        #our file path(need to create a video directory beforehand)
         filePath = "/home/pi/Desktop/cookie/Video/"
         currentTime = datetime.now()
         # Create file name for our picture
