@@ -1,5 +1,5 @@
 # RASPI-CODE
-![5vp3yyo8 qp98aevy5xli 1](https://user-images.githubusercontent.com/23002083/39365378-f8fb9d7c-49fe-11e8-9e84-49cac8db9c80.png)
+![bw3vt316e w l 0 lt ao](https://user-images.githubusercontent.com/23002083/39366138-0fd41ca2-4a01-11e8-8419-f0fdac2e0bd7.png)
 
 Above is the illustration flow chart of the main function. This is a pi-to-pi communication solution using UDP.
 Please be sure to check the IP address of both pis and change UDP_IP and DEST_IP accordingly.
