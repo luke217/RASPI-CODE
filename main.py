@@ -6,8 +6,12 @@ import socket
 import cookieCamera
 import P3picam
 
+#commandline: sudu ifconfig 
+#check ethernet Ip address instead of the HTTP IP address
 UDP_IP = "192.168.1.10"
 UDP_PORT = 5005
+#check the other pi's ethernet IP address
+DEST_IP = "192.168.1.11"
 MESSAGE = "Delay for 5 secs"
 
 def receive():
@@ -49,7 +53,7 @@ while True:
         if motionState:
             #motion captured, send signals to the other pi to delay their recording
             sock2= socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-            sock2.sendto(MESSAGE.encode(), (UDP_IP, UDP_PORT))
+            sock2.sendto(MESSAGE.encode(), (DEST_IP, UDP_PORT))
             #recording or take picture
             #cookieCamera.takePics(2)
             cookieCamera.takevid()
