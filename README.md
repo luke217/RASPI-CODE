@@ -1,7 +1,7 @@
 # RASPI-CODE
 
 
-#Tutorial Reference：
+# Tutorial Reference：
 Raspberry pi Setup/Camera Setup/Motion Detection/Taking Picture/Add timestamp/taking video:
 https://www.youtube.com/watch?v=RlUhDUJfTe8&list=PLNnwglGGYoTvy37TSGFlv-aFkpg7owWrE
 
