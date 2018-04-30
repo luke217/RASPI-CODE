@@ -8,13 +8,9 @@ import threading
 
 
 def takePics(picTotal):
-<<<<<<< HEAD
+
     #our file path
     filePath = "/home/pi/Desktop/cookie/Image/"
-=======
-    #our file path(need to create a cookie directory beforehand)
-    filePath = "/home/pi/Desktop/cookie/"
->>>>>>> e2c9cf06e24b3847eccd1f580b7d0b7c4ebe218d
     #picTotal = 1
     picCount = 0
     
@@ -74,7 +70,6 @@ def takevid():
    
     #Setup the camera
     with picamera.PiCamera() as camera:
-<<<<<<< HEAD
         camera.resolution = (1280,720)
         camera.start_preview()
             
@@ -86,21 +81,7 @@ def takevid():
         while(datetime.now()-currentTime).seconds <= 10:
             camera.annotate_text = datetime.now().strftime("%Y.%m.%d - %H:%M:%S")
             camera.wait_recording(0.2)
-        
-        
-      
-=======
-    
-        #our file path(need to create a video directory beforehand)
-        filePath = "/home/pi/Desktop/cookie/Video/"
-        currentTime = datetime.now()
-        # Create file name for our picture
-        vidTime = currentTime.strftime("%Y.%m.%d-%H%M%S")
-        vidName = vidTime + '.h264'
-        completeFilePath = filePath + vidName
-        camera.start_recording(completeFilePath)
-        sleep(5)
->>>>>>> e2c9cf06e24b3847eccd1f580b7d0b7c4ebe218d
+       
         camera.stop_recording()
         camera.stop_preview()
         
@@ -110,16 +91,3 @@ def takevid():
         #Execute our command
         call([command], shell = True)
         print("Video converted.")
-<<<<<<< HEAD
-        
-=======
-        #t = threading.Thread(target = playVideo, name = 'thread1', args = (filePath, vidTime))
-        #t.start()
-        #t.join()
-        
-def playVideo(filePath, vidTime):
-    playvideo = "omxplayer " + filePath + vidTime + ".mp4"
-    Popen([playvideo], shell = True)
-    print("Video played")
-    
->>>>>>> e2c9cf06e24b3847eccd1f580b7d0b7c4ebe218d
