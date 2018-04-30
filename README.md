@@ -9,6 +9,7 @@ What's more, please create an empty folder "Video" or "Image" beforehand accordi
 ## Tutorial Reference：
 Raspberry pi Setup/Camera Setup/Motion Detection/Taking Picture/Add timestamp/taking video:
 https://www.youtube.com/watch?v=RlUhDUJfTe8&list=PLNnwglGGYoTvy37TSGFlv-aFkpg7owWrE
+http://www.meccanismocomplesso.org/en/picamera-python-aggiungiamo-testi-sulle-immagini-e-video/
 
 Python multithreading/thread synchronization: lock
 https://www.youtube.com/watch?v=XndHx3EaDgA&list=PLXkh7XR1GR6oPFcxYfuFPyiAqah2mBnpb
