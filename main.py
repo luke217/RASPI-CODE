@@ -6,9 +6,17 @@ import socket
 import cookieCamera
 import P3picam
 
+<<<<<<< HEAD
 UDP_IP = "169.254.13.108"
 DEST_IP = "169.254.224.223"
+=======
+#commandline: sudu ifconfig 
+#check ethernet Ip address instead of the HTTP IP address
+UDP_IP = "192.168.1.10"
+>>>>>>> e2c9cf06e24b3847eccd1f580b7d0b7c4ebe218d
 UDP_PORT = 5005
+#check the other pi's ethernet IP address
+DEST_IP = "192.168.1.11"
 MESSAGE = "Delay for 5 secs"
 
 def receive():
