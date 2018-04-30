@@ -6,7 +6,8 @@ import socket
 import cookieCamera
 import P3picam
 
-UDP_IP = "192.168.1.10"
+UDP_IP = "169.254.13.108"
+DEST_IP = "169.254.224.223"
 UDP_PORT = 5005
 MESSAGE = "Delay for 5 secs"
 
@@ -16,7 +17,7 @@ def receive():
         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         sock.bind((UDP_IP, UDP_PORT))
         data,addr = sock.recvfrom(1024)
-        #print (addr[0])
+        print (addr[0])
         if addr[0] != UDP_IP:
             print ("received message:"+data.decode())
             lock.acquire()
@@ -49,10 +50,10 @@ while True:
         if motionState:
             #motion captured, send signals to the other pi to delay their recording
             sock2= socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-            sock2.sendto(MESSAGE.encode(), (UDP_IP, UDP_PORT))
+            sock2.sendto(MESSAGE.encode(), (DEST_IP, UDP_PORT))
             #recording or take picture
-            #cookieCamera.takePics(2)
-            cookieCamera.takevid()
+            cookieCamera.takePics(1)
+            #cookieCamera.takevid()
             
             
     #being delayed for 5 seconds by other pi
